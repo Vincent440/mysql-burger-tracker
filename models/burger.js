@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const orm = require("../config/orm.js");
 
 const burger = {
@@ -18,6 +17,5 @@ const burger = {
         });
     }
 };
-
 
 module.exports = burger;

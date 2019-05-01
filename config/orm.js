@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-console */
-// Import MySQL connection.
 const connection = require("./connection.js");
 
 function printQuestionMarks(num) {
@@ -27,9 +24,7 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-
 const orm = {
-
     all:(tableName,cb)=>{// selectAll
         let queryString = "SELECT * FROM " + tableName + ";";
         connection.query(queryString, (err, result)=> {
@@ -46,22 +41,21 @@ const orm = {
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";  
-        console.log(queryString);
+        //console.log(queryString);
         connection.query(queryString, vals, (err, result)=> {
             if (err) throw err;
             cb(result);
         });       
     },
-    update: (table, objColVals, condition, cb)=> {
-        var queryString = "UPDATE " + table;
+    update: (tableName, objColVals, condition, cb)=> {
+        var queryString = "UPDATE " + tableName;
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
-        console.log(queryString);
+        //console.log(queryString);
         connection.query(queryString,(err, result)=> {
           if (err) throw err;
-          
           cb(result);
         });
       }
