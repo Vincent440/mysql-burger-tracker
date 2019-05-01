@@ -1,7 +1,23 @@
-import orm from "../config/orm.js";
+/* eslint-disable no-undef */
+const orm = require("../config/orm.js");
 
-let burger = {
-    
-}
+const burger = {
+    all: (cb)=> {
+        orm.all("burgers", res=> {
+          cb(res);
+        });
+       },     // The variables cols and vals are arrays.
+    create: (cols, vals, cb)=> {
+        orm.create("burgers", cols, vals,res=> {
+            cb(res);
+        });
+    },
+    update: (objColVals, condition, cb)=> {
+        orm.update("burgers", objColVals, condition,res=> {
+            cb(res);
+        });
+    }
+};
+
 
 module.exports = burger;
