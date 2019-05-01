@@ -9,7 +9,6 @@ $(()=> {
           }
         );
     });
-
     $(".create-form").on("submit",(event)=> {// Make sure to preventDefault on a submit event.
         event.preventDefault();
         var newBurger = {
@@ -23,5 +22,4 @@ $(()=> {
           }
         );
     });
-
 });

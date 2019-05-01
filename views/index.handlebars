@@ -1,95 +1,63 @@
-<h1 class="text-center display-1 jumbotron">EAT-DA-BURGER</h1>
-
+<div class="jumbotron bg-success text-white">
+  <h1 class="text-center display-1 ">EAT-DA-BURGER</h1>
+</div>
 <div class="container">
+  <div class="row text-center text-bolder text-white">
+    <div class="col-6">
+      <div class="shadow-lg p-3 mb-5 bg-success rounded">
+        <h1>Un-Eaten Burgers!</h1>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="shadow-lg p-3 mb-3 bg-danger rounded">
+        <h1>Burgers Devoured!</h1>
+      </div>
+    </div>
+  </div>
   <div class="row text-center">
-    <div class="col-4">
-      <h2>AVAILABLE BURGERS</h2>
-        {{#each burgers}}
-        {{#unless this.devoured}}
-        <div class="row">
-        <div class="col-9">
-          {{this.id}}.{{this.burger_name}}
+    <div class="col-5">
+      {{#each burgers}}
+      {{#unless this.devoured}}
+      <div class="card text-white bg-success mb-2">
+        <div class="card-body m-1 p-2">
+          <h5 class="card-title text-center"><span class="badge badge-pill badge-info float-left">{{this.id}}.</span>
+            {{this.burger_name}}<span class="float-right">
+              <button class="change-devoured btn btn-danger btn-sm ml-2" data-id="{{this.id}}">
+                DEVOUR!
+              </button></span>
+          </h5>
         </div>
-        <div class="col-3">
-          <button class="change-devoured" data-id="{{this.id}}">
-            DEVOUR IT!
-          </button>
+      </div>
+      {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-3">
+      <div class="card bg-success text-white">
+        <img src="./assets/img/burger.jpg" class="card-img-top align-middle rounded-circle" alt="Burger image">
+        <div class="card-body">
+          <h4 class="card-title">Add New Burger!</h4>
+          <form class="create-form">
+            <div class="form-group text-left">
+              <label for="burgercreate">Burger Name:</label>
+              <input class="form-control text-center" type="text" id="burgercreate" name="burgername"
+                placeholder="Cheeseburger">
+            </div>
+            <button class="btn-dark btn btn-block" type="submit">Submit Burger</button>
           </form>
         </div>
-        </div>
-        {{/unless}}
-        {{/each}}
+      </div>
     </div>
-      <div class="col-4">
-      <h2>Add a Burger!</h2>
-      <form class="create-form">
-        <div class="form-group">
-          <label for="burgercreate">Burger Name:</label>
-          <input type="text" id="burgercreate" name="burgername">
+    <div class="col-4 text-center">
+      {{#each burgers}}
+      {{#if this.devoured}}
+      <div class="card text-white bg-danger mb-2">
+        <div class="card-body m-1 p-2">
+          <h5 class="card-title text-center"><span class="badge badge-pill badge-info float-left">{{this.id}}.</span>
+            {{this.burger_name}}</h5>
         </div>
-        <button type="submit">Add Burger</button>
-      </form>
-    </div>
-      <div class="col-4 text-center">
-        <h2>DEVOURED BURGERS</h2>
-        {{#each burgers}}
-        {{#if this.devoured}}
-        <div class="row">
-          <div class="col-12">
-            {{this.id}}.{{this.burger_name}}
-          </div>
-        </div>
-        {{/if}}
-        {{/each}}
+      </div>
+      {{/if}}
+      {{/each}}
     </div>
   </div>
-
 </div>
-
-
-{{!-- <h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-     <li>
-	{{name}}
-
-	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
-	DEVOUR
-	</button>
-
-
-</li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form> --}}
