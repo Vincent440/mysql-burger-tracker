@@ -36,11 +36,12 @@
         <img src="./assets/img/burger.jpg" class="card-img-top align-middle rounded-circle" alt="Burger image">
         <div class="card-body">
           <h4 class="card-title">Add New Burger!</h4>
+          <h6 id="valMessage" class="card-subtitle mb-2 text-muted"></h6>
           <form class="create-form">
             <div class="form-group text-left">
               <label for="burgercreate">Burger Name:</label>
               <input class="form-control text-center" type="text" id="burgercreate" name="burgername"
-                placeholder="Cheeseburger">
+                placeholder="Cheeseburger" required >
             </div>
             <button class="btn-dark btn btn-block" type="submit">Submit Burger</button>
           </form>

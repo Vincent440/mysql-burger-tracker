@@ -18,6 +18,7 @@ router.put("/burgers/update/:id",(req,res)=>{
 });
 
 router.post("/burgers/create",(req, res)=> {
+    
     burger.create(["burger_name"],[req.body.burger_name],result=> {
       res.status(200).end();
     });
