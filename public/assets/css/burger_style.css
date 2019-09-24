@@ -1,3 +1,14 @@
 #modalImg {
     opacity: .85;
 }
+
+.bg-green {
+    background-color: rgb(11, 53, 11);
+}
+
+.bg-red {
+    background-color: rgb(104, 11, 11);
+}
+.backdrop-bg {
+    background-color: rgb(40, 79, 110);
+}

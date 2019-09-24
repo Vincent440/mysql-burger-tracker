@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/Vincent440/burger#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
   }
 }
