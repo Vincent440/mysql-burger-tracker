@@ -1,27 +1,20 @@
-const express = require("express");
+const burger = require('../models/burger.js');
 
-const router = express.Router();
-
-const burger = require("../models/burger.js");
-
-router.get("/",(req,res)=>{
-    burger.all(burgers=>{
-        res.render('index',{burgers});
+module.exports = {
+  getAll: (req, res) => {
+    burger.all(burgers => {
+      res.render('index', { burgers });
     });
-});
-
-router.put("/burgers/update/:id",(req,res)=>{
-    var condition = "id = " + req.params.id;
-    burger.update({devoured:true},condition,result=>{
-        res.status(200).end();
-    });
-});
-
-router.post("/burgers/create",(req, res)=> {
-    
-    burger.create(["burger_name"],[req.body.burger_name],result=> {
+  },
+  createNew: (req, res) => {
+    burger.create(['burger_name'], [req.body.burger_name], () => {
       res.status(200).end();
     });
-});
-// Export routes for server.js to use.
-module.exports = router;
+  },
+  updateToEaten: (req, res) => {
+    const condition = `id = ${req.params.id}`;
+    burger.update({ devoured: true }, condition, () => {
+      res.status(200).end();
+    });
+  }
+};
