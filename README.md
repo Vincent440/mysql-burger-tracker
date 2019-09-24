@@ -1,10 +1,14 @@
-# MySQL-Eat-The-Burger
-A burger logger web app with MySQL, Node, Express, Handlebars and a ORM. Following the MVC design pattern; using Node and MySQL to query and route data, and Handlebars.js to generate the HTML.
+# MySQL Burger tracker
+A burger logger
+* Express.js framework for Node.js 
+   * MySQL npm package for database Queries using a custom ORM
+* MySQL Database to query and route data 
+* Handlebars.js View engine.
 
-A user visiting [mysql-eat-the-burger](https://mysql-eat-the-burger-app.herokuapp.com/) can: 
-* View all burgers upon viewing the page
+A user can: 
+* View all burgers previously created upon viewing the page
 * Create a new burger that will be available to be eaten
-* Select an un-eaten burger to then devour.
+* Select an available burger to `"Eat"`
    * Doing so marks the burger as eaten and removes any buttons from the UI. 
    
 
