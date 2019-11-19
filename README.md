@@ -10,10 +10,8 @@ A user can:
 * Create a new burger that will be available to be eaten
 * Select an available burger to `"Eat"`
    * Doing so marks the burger as eaten and removes any buttons from the UI. 
-   
-
-
-View the page here: [mysql-eat-the-burger](https://mysql-eat-the-burger-app.herokuapp.com/)
+  
+[mysql-burger-tracker](https://mysql-burger-tracker.herokuapp.com/) -  View the page here
 
 ### By Vincent Shury
 Thanks again for viewing my repository.
