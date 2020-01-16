@@ -1,26 +1,32 @@
 {
-  "name": "burger",
+  "name": "mysql-burger-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev" : "nodemon server.js",
+    "lint" : "npx standard --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vincent440/burger.git"
+    "url": "git+https://github.com/Vincent440/mysql-burger-tracker.git"
   },
   "author": "Vincent S Shury",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vincent440/burger/issues"
+    "url": "https://github.com/Vincent440/mysql-burger-trackerissues"
   },
-  "homepage": "https://github.com/Vincent440/burger#readme",
+  "homepage": "https://github.com/Vincent440/mysql-burger-tracker#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "standard": "^14.3.1"
   }
 }
