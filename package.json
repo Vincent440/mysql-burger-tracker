@@ -16,7 +16,7 @@
   "author": "Vincent S Shury",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vincent440/mysql-burger-trackerissues"
+    "url": "https://github.com/Vincent440/mysql-burger-tracker/issues"
   },
   "homepage": "https://github.com/Vincent440/mysql-burger-tracker#readme",
   "dependencies": {
