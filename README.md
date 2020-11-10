@@ -81,19 +81,19 @@ touch .env
 
 inside of the `.env` file
     * Add the following block of code and replace the text inside <> with your environment variables :
-```
-#DATABASE HOST TO CONNECT TO
-HOST=<localhost>
-#USER FOR CONNECTING TO DATABASE
-USER=<root>
-#PORT FOR APPLICATION TO RUN LOCALLY
-PORT=<3000>
-#PORT FOR CONNECTING TO DATABASE
-DB_PORT=<3306>
-#PASSWORD TO DATABASE
-DB_PASSWORD=<Your Database Password here>
-#NAME OF DATABASE
-DB_NAME=<burgers_db>
+```shell
+# DATABASE HOST TO CONNECT TO
+HOST='localhost'
+# USER FOR CONNECTING TO DATABASE
+USER='root'
+# PORT FOR APPLICATION TO RUN LOCALLY
+PORT=3000
+# PORT FOR CONNECTING TO DATABASE
+DB_PORT=3306
+# PASSWORD TO DATABASE
+DB_PASSWORD='Database Password'
+# NAME OF DATABASE
+DB_NAME=burgers_db
 ```
 
 Once thats all completed. 
